@@ -1,0 +1,70 @@
+{% extends 'base.html'%}
+{%load static%}
+{% block content %}
+<html>
+    <head>
+<style>
+h1{ color: rgb(250, 129, 149);
+text-align: center;
+font-family: "Lucida Console", "Courier New", monospace;
+padding-top: 400;
+
+}
+.p{font-family: "Lucida Console", "Courier New", monospace;
+color:#682F00;
+text-align: center;
+
+}
+div{text-align: center;
+    margin-top:35px;}
+.m{margin-top:35px;
+    
+    border-style: ridge #682F00;
+    width: 900;
+    height: auto;
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: rgb(250, 129, 149);
+}
+.IM{text-align:center;
+    font-size: 25px;
+    color:#682F00;}
+
+
+    .ph{margin-right:auto;}
+
+    .aziz{/* The image used */
+    background-image: url("{%static 'pages\img\elevate-5e-JfidWFH0-unsplash.jpg'%}");
+  
+    /* Full height */
+    height: 135%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 10;
+     color: rgb(250, 129, 149);
+
+}
+
+    
+</style>
+    </head>
+    <body>
+        <div class="aziz">
+        <h1>WHO WE ARE ?</h1>
+        </div>
+       <div>
+          
+           <div class="m">
+               <h3> OUR STORY </h3>
+               <hr>
+<p class="IM">
+    Our Bakery Story is the unfolding of a beginning in realization for our passion and dedication for excellent Breads and Pastries. Try our baked goodies that simply melts in your mouth.
+    </p>
+    <img class="ph" width="460" height="300" src="{%static 'pages\img\anshu-a-E5xgkSFan84-unsplash (1).jpg'%}">
+
+</body>
+</html>
+{% endblock %}

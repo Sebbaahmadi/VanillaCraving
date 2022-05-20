@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block content %}
+<html>
+  <head>
+
+  </head>
+  <style>
+h1{ color: rgb(250, 129, 149);
+text-align: center;
+font-family: "Lucida Console", "Courier New", monospace;
+}
+p{ color:#682F00;
+text-align: center;
+font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
+div{color:rgb(250, 129, 149);
+text-align: center;
+font-family: "Lucida Console", "Courier New", monospace;
+white-space: nowrap;
+padding-top: 20px;
+}
+
+  </style>
+  <body>
+   <main class="container">
+  <div class="p-4 p-md-5 mb-4 text-dark rounded bg-white">
+    <div class="col-md-6 px-0">
+      <h1>Welcome To Our Bakery </h1>
+      <p class="lead my-3"> FRESHLY BAKED COOKIES & DESSERTS</p>
+    </div>
+  </div>
+ {% for x in post.all %}
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0">{{ x.title }}</h3>
+         
+          <p class="card-text mb-auto">{{ x.text }}</p>
+        </div>
+      </div>
+      </div>
+    </div>
+   </main>
+
+
+
+    {% endfor %}
+  </body>
+    </html>
+{% endblock %}

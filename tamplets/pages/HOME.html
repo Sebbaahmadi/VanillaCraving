@@ -1,0 +1,154 @@
+{% extends 'base.html'%}
+{%load static%}
+{% block content %}
+<html>
+    <head>
+        <script type="text/javascript">
+            function setNewImage()
+            {
+            document.getElementById("img1").src="{% static 'pages\img\pound cake 2.jpg' %}";
+            document.getElementById("img2").src="{% static 'pages\img\crinkles 2.jpg' %}";
+            document.getElementById("img3").src="{% static 'pages\img\browneis out.jpg' %}";
+            document.getElementById("img4").src="{% static 'pages\img\cooke 2.jpg' %}";
+            }
+            
+
+            function setOldImage()
+            {
+            document.getElementById("img1").src="{% static 'pages\img\cake out.jpg' %}";
+            document.getElementById("img2").src="{% static 'pages\img\crinkiles out.jpg' %}";
+            document.getElementById("img3").src="{% static 'pages\img\browneis 2.jpg' %}";
+            document.getElementById("img4").src="{% static 'pages\img\cooke.jpg' %}";
+            //alerte(); 
+            }
+//2  
+         
+
+
+            </script>
+    </head>
+<style>
+
+div{text-align: center; }
+    
+
+.m{margin-top:10px;
+    border:1px solid #682F00;
+    width: 100%;
+    height: auto;
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 30px;
+    color: rgb(250, 129, 149);
+    height: 150;
+    text-align: center;
+    
+ 
+}
+.aziz{/* The image used */
+    background-image: url("{%static 'pages\img\julissa-capdevilla-tDoHiqXl9b8-unsplash.jpg'%}");
+  
+    /* Full height */
+    height: 135%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 10;
+     color: rgb(250, 129, 149);
+
+}
+
+h1{font-family: "Lucida Console", "Courier New", monospace;
+color:rgb(250, 129, 149);
+text-align:center;
+padding-top: 400;
+
+}
+
+h2{font-family: "Lucida Console", "Courier New", monospace;
+color:#682F00;
+text-align:center;
+padding-top: 40;}
+
+.p{font-family: "Lucida Console", "Courier New", monospace;
+color:aliceblue;
+text-align:center;
+margin-top: 0;
+font-size: 30px;
+
+}
+
+img{
+    white-space: nowrap;
+padding-top: 20px;
+}
+.best{white-space: nowrap;
+padding-top: 20px;}
+
+.seller{
+    margin-top:25px;
+    margin-bottom: 25px;
+    
+}
+
+
+
+
+</style>
+<title>HOME</title>
+    </head>
+    <body>
+        <div class="aziz">
+            
+        <h1>VANILA CRAVING</h1>
+        
+        <P class="p">FRESHLY BAKED COOKIES & DESSERTS</P>
+       </div>
+
+
+        <div>
+          
+           <div class="m">
+<p>
+    <br>
+    "It must be lonely to be vanilla loved, and there isn't many of you out there."
+</p>
+</div>
+        </div>
+        
+       
+<div class="best">
+    <div class="seller">
+    <h2> BEST SELLER </h2>
+</div>
+
+
+
+<a href="{% url 'BLOG' %}" class="fancylight popup-btn" data-fancybox-group="light" target="_blank"> 
+    <img id="img2" onmouseover=" setNewImage()"onmouseout="setOldImage()"src="{% static 'pages\img\crinkiles out.jpg' %}" width="300" />
+
+    </a>
+  
+        <a href="{% url 'BLOG' %}" class="fancylight popup-btn" data-fancybox-group="light" target="_blank"> 
+            <img id="img3" onmouseover=" setNewImage()"onmouseout="setOldImage()"src="{% static 'pages\img\browneis out.jpg' %}" width="350" />
+       
+            </a>
+            <a href="{% url 'BLOG' %}" class="fancylight popup-btn" data-fancybox-group="light" target="_blank"> 
+                <img id="img4" onmouseover=" setNewImage()"onmouseout="setOldImage()"src="{% static 'pages\img\cooke 2.jpg' %}" width="300" />
+       
+            </a>
+
+            <a href="{% url 'BLOG' %}" class="fancylight popup-btn" data-fancybox-group="light" target="_blank"> 
+                <img id="img1" onmouseover=" setNewImage()"onmouseout="setOldImage()"src="{% static 'pages\img\cake out.jpg' %}" width="350" />
+
+                </a>
+    
+
+
+
+
+       </div>
+    </body>
+</html>
+{% endblock %}

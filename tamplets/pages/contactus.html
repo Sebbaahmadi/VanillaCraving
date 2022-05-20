@@ -1,0 +1,93 @@
+{% extends 'base.html'%}
+{%load static%}
+{% block content %}
+<html>
+    <head>
+<style>
+h1{ color:aliceblue;
+text-align: center;
+font-family: "Lucida Console", "Courier New", monospace;
+padding-top: 400;
+}
+.p{font-family: "Lucida Console", "Courier New", monospace;
+color:#682F00;
+text-align: center;
+
+}
+div{text-align: center;
+    margin-top:35px;}
+.m{margin-top:35px;
+    
+    border-style: ridge #682F00;
+    width: 900;
+    height: auto;
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: rgb(250, 129, 149);
+}
+.IM{text-align:right;
+    font-size: 20px;
+    color:#682F00;}
+    .ph{margin-right:auto;}
+    .sa{text-align:right;
+    font-size: 20px;
+    color:#682F00;}
+    .aziz{/* The image used */
+    background-image: url("{%static 'pages\img\conor-brown-H1uISjlRXJE-unsplash.jpg'%}");
+  
+    /* Full height */
+    height: 135%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 10;
+     color: rgb(250, 129, 149);
+
+}
+form{text-align: left; color: rgb(250, 129, 149);
+padding-top: 0%;}
+
+.send{background-color: rgb(250, 129, 149);}
+
+</style>
+    </head>
+    <body>
+        <div class="aziz">
+        <h1>CONTACT US</h1>
+    </div>
+        <div>
+            
+            <div class="m">
+                <h3> OUR INFOMATION </h3>
+                <hr>
+
+
+<form  method="post" action=" {% url 'CONTACT US' %} ">
+{% csrf_token %}
+ <p>Name:</p> 
+ <input name="name" type="text" placeholder="     Name">
+
+</br>
+ <p>E-mail: </p>
+ <input  name= "e-mail" type="text" placeholder="    E-mail"> 
+
+
+ <p> Message </p>
+ <textarea name="comments" cols="50" rows="5">    write your Message..</textarea>
+ <br>
+ <br>
+ <input class="send" type="submit" value="send">
+ 
+ </form>
+
+
+
+ <p class="IM">
+    E-mail: Vanilla.craiving@gmail.com    |Phone Number: +966 54-565-0935    |Instagram : @Vanilla_Craving
+</p>
+     
+    </body>
+    </html>
+    {% endblock %}
